@@ -4,7 +4,7 @@ Can we translate documentation managed in `docs` in your preferred natural langu
 
 ## Usage
 
-```
+```sh
 git clone https://github.com/AtelierArith/Example4DocstringTranslation.jl.git
 cd Example4DocstringTranslation.jl
 julia --project -e 'using Pkg; Pkg.instantiate()'
