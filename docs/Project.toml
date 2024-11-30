@@ -1,0 +1,10 @@
+[deps]
+DocstringTranslationOllamaBackend = "0a42a1af-e0c0-4cdb-822d-6b43e0751063"
+Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
+Example4DocstringTranslation = "6ff4538a-02b9-49e6-ba67-523193ad6c6c"
+
+[sources]
+DocstringTranslationOllamaBackend = {url = "https://github.com/AtelierArith/DocstringTranslationOllamaBackend.jl"}
+
+[compat]
+Documenter = "1"
