@@ -1,3 +1,5 @@
+set -eux
+
 rm -rf docs/build
 
 julia --project=docs/ -e 'using Pkg; Pkg.develop(PackageSpec(path=pwd()));
