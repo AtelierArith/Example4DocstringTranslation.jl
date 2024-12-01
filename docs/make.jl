@@ -1,8 +1,10 @@
+using Documenter, Example4DocstringTranslation
+
+# Begin hook
 using DocstringTranslationOllamaBackend
 using DocstringTranslationOllamaBackend: translate_with_ollama, default_lang, default_model
 @switchlang! :Japanese
 
-using Documenter, Example4DocstringTranslation
 using Documenter: Markdown
 
 function promptfn(
@@ -17,14 +19,14 @@ Please provide a faithful translation of the following Documenter.jl flavor Mark
 $(m)
 \"\"\"
 
-Keep in mind the following items:
+Keep the following points in mind:
 
-- The translation should faithfully preserve the formatting of the original Markdown. 
-- Do not translate quoted word. 
-- Do not translateThe headings, where headings means text begin with #
+- The translation should retain the formatting of the original Markdown. 
+- Do not translate quoted words. 
+- Do not translate headings, where headings means text beginning with #.
 - Do not add or remove unnecessary text. 
-- Only return a faithful translation.
-- Never stop until the translation is complete.:
+- Return only a faithful translation.
+- Do not stop until the translation is complete.
 
 Please start. Only return the result.
 """
@@ -57,6 +59,7 @@ function Documenter.Page(source::AbstractString, build::AbstractString, workdir:
     end
     return Documenter.Page(source, build, workdir, mdpage.content, Documenter.Globals(), mdast)
 end
+# end hook
 
 makedocs(modules = [Example4DocstringTranslation],
          sitename = "Example4DocstringTranslation.jl",
